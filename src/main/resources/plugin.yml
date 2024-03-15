@@ -1,0 +1,21 @@
+name: simplehome
+version: '${version}'
+main: dev.taxmachine.simplehome.SimpleHome
+api-version: '1.20'
+commands:
+  home:
+    description: teleports you to a home
+    usage: /<command> <home name>
+  sethome:
+    description: sets a home to your current location
+    usage: /<command> <home name>
+  homes:
+    description: displays all of your homes
+    usage: /<command>
+  delhome:
+    description: deletes a home
+    usage: /<command> <home name>
+  sethomelimit:
+    description: sets the maximum number of homes a player can have
+    usage: /<command> <limit>
+    permission: minecraft.command.op
