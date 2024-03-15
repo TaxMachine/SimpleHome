@@ -15,7 +15,6 @@ public class DbManager {
     private Config config;
     public DbManager() {
         config = new Config();
-        config.players = new HashMap<>();
     }
     public void saveConfig() {
         String jsonStr = new Gson().toJson(config);

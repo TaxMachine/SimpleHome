@@ -9,7 +9,9 @@ public class Config {
     public int homeLimit = 5;
     public HashMap<String, List<Home>> players;
 
-    public Config() {}
+    public Config() {
+        players = new HashMap<>();
+    }
 
     public int getHomeLimit() {
         return homeLimit;
