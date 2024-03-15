@@ -24,7 +24,7 @@ public class SetHomeCommand implements CommandExecutor {
         String homename = strings[0];
         World world = player.getWorld();
         try {
-            SimpleHome.DB_MANAGER.addHome(player.getUniqueId(), world, homename, player.getX(), player.getY(), player.getZ());
+            SimpleHome.DB_MANAGER.addHome(player.getUniqueId(), world, homename, player.getX(), player.getY(), player.getZ(), player.getYaw(), player.getPitch());
             commandSender.sendRichMessage("Successfully added <light_purple>" + homename + "</light_purple> to your home list");
             return true;
         } catch (IllegalArgumentException exception) {

@@ -26,7 +26,7 @@ public class HomeCommand implements CommandExecutor {
         String homename = strings[0];
         try {
             Home home = SimpleHome.DB_MANAGER.getHome(player.getUniqueId(), homename);
-            Location location = new Location(Bukkit.getWorld(home.world), home.x, home.y, home.z);
+            Location location = new Location(Bukkit.getWorld(home.world), home.x, home.y, home.z, home.yaw, home.pitch);
             player.teleport(location);
             commandSender.sendRichMessage("Successfully teleported to <light_purple>" + homename + "</light_purple>");
             return true;

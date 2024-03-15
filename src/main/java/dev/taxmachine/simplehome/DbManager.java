@@ -49,8 +49,8 @@ public class DbManager {
         config.addPlayer(uuid);
     }
 
-    public void addHome(UUID uuid, World world, String name, double x, double y, double z) {
-        config.addHome(uuid, new Home(name, world, x, y, z));
+    public void addHome(UUID uuid, World world, String name, double x, double y, double z, float yaw, float pitch) {
+        config.addHome(uuid, new Home(name, world, x, y, z, yaw, pitch));
     }
 
     public Home getHome(UUID uuid, String name) {
@@ -58,7 +58,7 @@ public class DbManager {
     }
 
     public List<Home> getHomes(UUID uuid) {
-        return config.players.get(uuid.toString());
+        return config.getHomes(uuid);
     }
 
     public void removeHome(UUID uuid, String name) {

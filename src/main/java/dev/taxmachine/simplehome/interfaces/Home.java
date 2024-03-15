@@ -6,13 +6,16 @@ public class Home {
     public String name;
     public String world;
     public double x, y, z;
+    public float yaw, pitch;
 
-    public Home(String name, World world, double x, double y, double z) {
+    public Home(String name, World world, double x, double y, double z, float yaw, float pitch) {
         this.name = name;
         this.world = world.getName();
         this.x = x;
         this.y = y;
         this.z = z;
+        this.yaw = yaw;
+        this.pitch = pitch;
     }
 
     public String getName() {
@@ -33,5 +36,13 @@ public class Home {
 
     public double getZ() {
         return z;
+    }
+
+    public float getYaw() {
+        return yaw;
+    }
+
+    public float getPitch() {
+        return pitch;
     }
 }
